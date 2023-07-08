@@ -7,9 +7,10 @@ function solution (arr) {
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] !== arr[i+1]) { //앞의 값과 뒤의 값을 비교
             newArr.push(arr[i]);
+            console.log(newArr)
         }
     }
-    console.log('newArr', newArr)
+    console.log('최종값:', newArr)
     return newArr;
 }
 
@@ -31,11 +32,13 @@ function reverse(num) {
     for(let j = changeNum.length-1; j >= 0; j--) {
         // newStr = newStr + changeNum[j];
         newStr = `${newStr}${changeNum[j]}`;
-        console.log(newStr, typeof(newStr))
+        //console.log(newStr, typeof(newStr))
     }
     let newNum = parseInt(newStr, 3);
-    console.log(newNum)
+    console.log('10진법-> 3진법으로:', newNum)
+    return newNum;
 }
 
 
 reverse(45);
+// reverse(125);
