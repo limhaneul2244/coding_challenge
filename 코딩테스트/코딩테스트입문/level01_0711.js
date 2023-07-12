@@ -53,25 +53,44 @@ function solution2(dot) {
 
 /**
  * 짝수 홀수 개수
+ * 1. for문을 돌면서 array의 값을 뽑아낸다
+ * 2. %로 짝수의 개수를 체크한다.
  */
 function solution3 (num_list) {
     let answer = [];
-    let odd = 0; //홀수의 개수
-    let even = 0; //짝수의 개수
-    let count = 0;
-    console.log(num_list)
-    for(let i = 0; i < num_list.length; i++) {
-        console.log(num_list[i])
+    let newArray = [];
+    let count = 1;
+    for (let i = 0; i < num_list.length; i++) {
         if(num_list[i] % 2 === 0) {
-            even = count++;
-            console.log('짝수개수', even)
-        } else if (num_list[i] % 1 === 0) {
-            odd = count++;
-            console.log('홀수개수', odd)
+            newArray = count++;
+            console.log('짝수입니다', array)
         }
+        // if (num_list[i] % 2 === 1) {
+        //     array[1] = count++;
+        //     console.log('홀수입니다', array[1])
+        // }
     }
-    // return answer;
 }
 
-solution3 ([1,2,3,4,5]); //[2,3]
-solution3 ([1,3,5,7]); //[0,4]
+// solution3 ([1,2,3,4,5]); //[2,3]
+// solution3 ([1,3,5,7]); //[0,4]
+
+
+/**
+ * 중복된 숫자 개수
+ */
+function solution4 (array, n) {
+    let answer = 0;
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i])
+        if(array[i] === n) {
+            count++;
+            answer = count;
+        }
+    }
+    return answer;
+}
+
+// solution4([1, 1, 2, 3, 4, 5], 1); //2
+solution4([0, 2, 3, 4], 1); //0
