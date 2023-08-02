@@ -28,8 +28,8 @@ function solution1(n, k) {
 }
 
 // 몇인분, 음료개수
-solution1(10,3);
-solution1(64,6);
+// solution1(10,3);
+// solution1(64,6);
 
 /**
  * 점의 위치 구하기
@@ -52,31 +52,6 @@ function solution2(dot) {
 // solution2([-7, 9]); //2
 
 /**
- * 짝수 홀수 개수
- * 1. for문을 돌면서 array의 값을 뽑아낸다
- * 2. %로 짝수의 개수를 체크한다.
- */
-function solution3 (num_list) {
-    let answer = [];
-    let newArray = [];
-    let count = 1;
-    for (let i = 0; i < num_list.length; i++) {
-        if(num_list[i] % 2 === 0) {
-            newArray = count++;
-            console.log('짝수입니다', array)
-        }
-        // if (num_list[i] % 2 === 1) {
-        //     array[1] = count++;
-        //     console.log('홀수입니다', array[1])
-        // }
-    }
-}
-
-// solution3 ([1,2,3,4,5]); //[2,3]
-// solution3 ([1,3,5,7]); //[0,4]
-
-
-/**
  * 중복된 숫자 개수
  */
 function solution4 (array, n) {
@@ -93,4 +68,33 @@ function solution4 (array, n) {
 }
 
 // solution4([1, 1, 2, 3, 4, 5], 1); //2
-solution4([0, 2, 3, 4], 1); //0
+// solution4([0, 2, 3, 4], 1); //0
+
+/**
+ * 피자 나눠 먹기 (3)
+ */
+function solution5 (slice, n) {
+    let answer = 0;
+    let sliceNum = 0;
+    answer = n / slice;
+    sliceNum = Math.ceil(answer)
+}
+
+// solution5(7, 10); //2
+// solution5(4, 12); //3
+
+/**
+ * 배열의 유사도
+ * step1. 파라미터로 들어온 배열의 길이를 구한다.
+ */
+
+function solution6 (s1, s2) {
+    let answer = [];
+    let num = 0;
+    answer = s1.filter(item => s2.includes(item))
+    num = answer.length;
+    return answer;
+}
+
+solution6(["a", "b", "c"], ["com", "b", "d", "p", "c"]); //2
+// solution6(["n", "omg"], ["m", "dot"]);
