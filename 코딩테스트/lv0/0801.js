@@ -13,5 +13,15 @@ function solution(my_string) {
   return lastVal;
 }
 
-solution('bus'); //"bs"
+// solution('bus'); //"bs"
 // solution('nice to meet you'); //"nc t mt y"
+
+function solution1 (my_string) {
+  let answer = [];
+  answer = my_string.split('').filter((item => !isNaN(item)));
+  return answer.sort().map(Number);
+}
+
+solution1 ("hi12392");
+solution1 ("p2o4i8gj2");
+solution1 ("abcde0");
